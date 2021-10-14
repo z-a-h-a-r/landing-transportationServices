@@ -1,0 +1,121 @@
+.footer {
+	background: #c8a35f;
+	display: grid;
+	grid-template: 1fr / 1fr 9fr 1fr;
+
+	// ========================================
+
+	&__inner {
+		padding: 60px 0;
+		display: grid;
+		grid-column: 2 / 3;
+
+		// ========================================
+
+		@media (min-width: 912px) {
+			grid-template: 1fr / repeat(4, 1fr);
+		}
+		@media (min-width: 912px) {
+			grid-template: 1fr / repeat(4, 1fr);
+		}
+	}
+
+	// ========================================
+
+	@media (max-width: 912px) {
+		&__logo {
+			display: grid;
+			justify-content: center;
+		}
+
+		&__mail-address {
+			display: none;
+		}
+
+		&__numbers {
+			display: none;
+		}
+
+		&__done {
+			margin-top: 20px;
+		}
+	}
+
+	// ========================================
+
+	&__mail-address {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__address {
+		font-size: 12px;
+		line-height: 16px;
+		color: #f2f2f2;
+		opacity: 0.8;
+		transition: 0.5s;
+
+		// ========================================
+
+		&:hover {
+			cursor: pointer;
+			color: black;
+		}
+	}
+	&__mail {
+		margin-top: 10px;
+		font-size: 12px;
+		line-height: 16px;
+		color: #2f343a;
+
+		// ========================================
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	// ========================================
+
+	&__numbers {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__number {
+		font-size: 14px;
+		line-height: 16px;
+		color: #f2f2f2;
+		transition: 0.6s;
+
+		// ========================================
+
+		&:hover {
+			cursor: pointer;
+			color: black;
+		}
+	}
+
+	// ========================================
+
+	&__done {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		// ========================================
+
+		& a {
+			color: black;
+			transition: 0.5s;
+
+			// ========================================
+
+			&:hover {
+				color: rgb(93, 93, 93);
+			}
+		}
+	}
+}

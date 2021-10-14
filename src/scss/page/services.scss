@@ -1,0 +1,167 @@
+.services {
+	position: relative;
+	display: grid;
+	grid-template: 1fr /1fr 9fr 1fr;
+	background: #393f47;
+
+	// ==========================================
+
+	&__inner {
+		padding: 120px 0;
+		display: grid;
+		grid-column: 2 / 3;
+
+		@media (min-width: 912px) {
+			grid-template: 1fr / 1fr 1fr;
+		}
+	}
+
+	// =============================================
+
+	&__decoration-wrap {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template: 1fr / 1fr 1fr 1fr;
+	}
+	&__decoration {
+		grid-column: 2 / 3;
+		background: #2f343a;
+	}
+
+	// =============================================
+
+	&__left {
+		position: relative;
+		z-index: 2;
+
+		// ==========================================
+
+		& h1 {
+			margin-top: 40px;
+
+			font-weight: bold;
+			font-size: 40px;
+			line-height: 49px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			color: #ffffff;
+		}
+		& h2 {
+			margin-top: 30px;
+
+			font-size: 18px;
+			line-height: 28px;
+			color: #ffffff;
+		}
+
+		@media (max-width: 479px) {
+			& h1 {
+				margin-top: 40px;
+				font-size: 30px;
+			}
+
+			& h2 {
+				margin-top: 30px;
+				font-size: 16px;
+			}
+		}
+
+		// ==========================================
+
+		& button {
+			padding: 14px 48px;
+			background: #c8a35f;
+			margin-top: 50px;
+
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 25px;
+			text-align: center;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #ffffff;
+
+			transition: 0.4s;
+
+			&:hover {
+				background: #5f5645;
+			}
+		}
+	}
+
+	&__right {
+		z-index: 2;
+		display: grid;
+		grid-template: 1fr / 1.9fr 1fr;
+
+		// ==========================================
+
+		.services__track {
+			width: 100%;
+			height: 100%;
+			background: url(../img/content/truck.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+		}
+
+		// ==========================================
+
+		.services__buttons {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.services__nb {
+			display: grid;
+			align-items: center;
+
+			// ==========================================
+
+			& h1 {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 25px;
+				text-align: center;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: #c8a35f;
+
+				&:hover {
+					cursor: pointer;
+					color: #7e735e;
+				}
+			}
+			& img {
+				width: 100%;
+			}
+		}
+		.services__next {
+			grid-template: 1fr / 1.5fr 1fr;
+
+			// ==========================================
+
+			& h1 {
+				text-align: left;
+			}
+		}
+		.services__back {
+			grid-template: 1fr / 1fr 1.5fr;
+
+			// ==========================================
+
+			& h1 {
+				text-align: right;
+			}
+		}
+
+		// ==========================================
+
+		@media (max-width: 912px) {
+			display: none;
+		}
+	}
+}

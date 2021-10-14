@@ -1,0 +1,61 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url('../fonts/#{$file_name}.woff') format('woff'),
+			url('../fonts/#{$file_name}.woff2') format('woff2');
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// @import 'fonts.scss';
+
+// ========================================
+
+body,
+html {
+	overflow-x: hidden;
+	width: 100%;
+}
+
+// ========================================
+
+// * {
+// 	border: 1px rgb(192, 192, 192) solid;
+// }
+
+// ========================================
+
+* {
+	font-family: 'Roboto Mono', monospace;
+}
+
+// ========================================
+
+.line {
+	width: 90px;
+	height: 6px;
+	background: #c8a35f;
+}
+
+// ===============
+
+.logo-inner {
+	display: grid;
+	grid-template: 1fr / minmax(auto, 1fr) 3fr;
+}
+.logo {
+	& img {
+		width: 40px;
+		height: auto;
+	}
+}
+.logo-name {
+	padding: 0 20px 0 10px;
+	& h1 {
+		font-size: 25px;
+	}
+	& h2 {
+		font-size: 10px;
+	}
+}

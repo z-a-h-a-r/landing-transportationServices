@@ -1,0 +1,145 @@
+.about {
+	background: #2f343a;
+	padding: 0 0 120px;
+	display: grid;
+	grid-template: 1fr / 1fr 9fr 1fr;
+
+	// =======================================
+
+	&__inner {
+		grid-column: 2 / 3;
+		padding: 80px 0 110px;
+		display: grid;
+
+		@media (min-width: 912px) {
+			grid-template: 1fr / 1fr 1fr;
+		}
+	}
+
+	// =======================================
+
+	&__left {
+		z-index: 2;
+
+		// =======================================
+
+		@media (min-width: 912px) {
+			padding: 0 60px 0 0;
+		}
+	}
+	&__text {
+		& h1 {
+			margin: 40px 0 0 0;
+			font-weight: bold;
+			font-size: 40px;
+			line-height: 49px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			color: #ffffff;
+
+			@media (max-width: 479px) {
+				font-size: 30px;
+			}
+		}
+		& h2 {
+			margin: 30px 0 0 0;
+
+			font-size: 16px;
+			line-height: 23px;
+			color: #ffffff;
+
+			@media (max-width: 479px) {
+				font-size: 16px;
+			}
+			@media (max-width: 912px) {
+				text-align: justify;
+			}
+		}
+	}
+
+	// =======================================
+
+	&__right {
+		z-index: 2;
+	}
+
+	// =======================================
+
+	&__list {
+		gap: 3px;
+		display: grid;
+		grid-template: 1fr / repeat(3, 1fr);
+
+		@media (max-width: 912px) {
+			display: none;
+		}
+	}
+	&__item {
+		background: #fff;
+	}
+
+	// =======================================
+
+	.item-text {
+		color: black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		// =======================================
+
+		& h1 {
+			font-weight: bold;
+			font-size: 64px;
+			line-height: 75px;
+			text-align: center;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			color: #2f343a;
+		}
+		& h2 {
+			font-size: 18px;
+			line-height: 21px;
+			text-align: center;
+			letter-spacing: 0.05em;
+			color: #000000;
+		}
+		& h3 {
+			font-size: 12px;
+			line-height: 14px;
+			text-align: center;
+			color: #000000;
+		}
+	}
+	.item-img {
+		position: relative;
+
+		// =======================================
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		// =======================================
+
+		@media (max-width: 912px) {
+			display: none;
+		}
+	}
+}
+
+// ==========================================
+
+.map {
+	&__inner {
+		background-image: url(../img/content/map-bg.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top;
+		width: 100%;
+		height: 40vh;
+	}
+}

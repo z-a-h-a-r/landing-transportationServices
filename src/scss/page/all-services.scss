@@ -1,0 +1,107 @@
+.all-services {
+	display: grid;
+	grid-template: 1fr / 1fr 9fr 1fr;
+	background: #2f343a;
+
+	// ==========================================
+
+	&__inner {
+		padding: 120px 0;
+		grid-column: 2 / 3;
+	}
+
+	// ==========================================
+
+	&__title {
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 49px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #ffffff;
+		margin-top: 40px;
+
+		// ==========================================
+
+		@media (max-width: 479px) {
+			font-size: 30px;
+		}
+	}
+
+	// ==========================================
+
+	&__list {
+		margin-top: 60px;
+		display: grid;
+		grid-template: 2fr / repeat(4, 1fr);
+		gap: 7px;
+
+		// ==========================================
+
+		@media (max-width: 912px) {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
+	}
+	.all-item {
+		padding: 3% 5%;
+		background: #393f47;
+		transition: 0.6s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		object-fit: cover;
+
+		// ==========================================
+
+		&__ico-wrap {
+			width: 70px;
+			height: 70px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			border-radius: 50%;
+			background: #31373b;
+			transition: 0.2s;
+		}
+		&__ico {
+			background: url(../img/ico/arrow-white.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 30px;
+			transition: 0.2s;
+			height: 30px;
+		}
+
+		// ==========================================
+
+		& h1 {
+			margin-top: 23px;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 22px;
+			text-align: center;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			color: #ffffff;
+		}
+
+		// ==========================================
+
+		&:hover {
+			background: #c8a35f;
+			cursor: pointer;
+
+			// ==========================================
+
+			.all-item__ico-wrap {
+				background: #fff;
+			}
+			.all-item__ico {
+				background: url(../img/ico/arrow-black.svg);
+			}
+		}
+	}
+}

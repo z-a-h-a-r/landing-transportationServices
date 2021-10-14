@@ -1,0 +1,72 @@
+.first-screen {
+	&__inner {
+		padding: 155px 0;
+		background: url(../img/content/truck-bg.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		display: grid;
+		grid-template: 1fr / 1fr 9fr 1fr;
+	}
+
+	// ==========================================
+
+	&__content {
+		grid-column: 2 / 3;
+		border: 1px solid #c8a35f;
+		padding: 45px 71px;
+		display: grid;
+		grid-template:
+			minmax(auto, 45px) 1fr minmax(auto, 45px) / minmax(auto, 71px)
+			1fr minmax(auto, 71px);
+
+		// ==========================================
+
+		.first-screen__content-inner {
+			grid-row: 2 / 3;
+			grid-column: 2 / 3;
+		}
+
+		// ==========================================
+
+		& h1 {
+			color: #fff;
+			font-weight: bold;
+			font-size: 64px;
+			line-height: 75px;
+			text-align: center;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+
+			@media (max-width: 414px) {
+				font-size: 35px;
+			}
+		}
+		& h2 {
+			margin-top: 45px;
+			font-size: 18px;
+			line-height: 28px;
+			color: #ffffff;
+			text-align: center;
+
+			@media (max-width: 414px) {
+				font-size: 14px;
+			}
+		}
+
+		// ==========================================
+
+		@media (max-width: 612px) {
+			padding: 5% 3%;
+
+			& h1 {
+				font-size: 50px;
+				line-height: 1.2;
+			}
+			& h2 {
+				margin-top: 35px;
+				font-size: 18px;
+			}
+		}
+	}
+}
